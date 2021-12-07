@@ -1,4 +1,4 @@
-Westmount CI Covid-19 Self Screening Form
+YRDSB / TeachAssist Virtual Student Card
 ==================
 Website for YRDSB (and other TeachAssist-based schools) to enjoy an auto-generated barcode based on your student number to scan for access in facilities such as the library.
 
