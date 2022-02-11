@@ -84,21 +84,28 @@ class Barcode {
 
 }
 
-
 $(document).on("ready", () => {
 
     const inputField = new InputField();
     const barcode = new Barcode();
 
-    // Load Saved Values
+    // Load Pre-Determined Value
     {
-        let initialValue = inputField.getCookieValue();
-        if (initialValue !== null) {
-            inputField.updateInputBox(initialValue);
-            barcode.setFieldValue(initialValue);
-        } else {
+        let id = new URL(location.href).searchParams.get("id");
 
+        if (!isNaN(id) && id.length <= 9) {
+            inputField.updateInputBox(id);
+            barcode.setFieldValue(id);
+        } else {
+            let initialValue = inputField.getCookieValue();
+            if (initialValue !== null) {
+                inputField.updateInputBox(initialValue);
+                barcode.setFieldValue(initialValue);
+            } else {
+
+            }
         }
+
     }
 
     // Change Future Values
