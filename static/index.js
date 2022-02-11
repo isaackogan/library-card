@@ -91,11 +91,7 @@ $(document).on("ready", () => {
 
     // Load Pre-Determined Value
     {
-        let id = new URL(location.href).searchParams.get("id");
-        console.log(id);
-        console.log("GOT")
-        console.log(!isNaN(id))
-        console.log(id.length <= 9);
+        let id = new URL(location.href).searchParams.get("id") || "";
 
         if (!isNaN(id) && id.length <= 9) {
             inputField.updateInputBox(id);
